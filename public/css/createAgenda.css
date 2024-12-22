@@ -1,0 +1,125 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set the body height to 100vh to fit the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2; /* Light background color for contrast */
+    overflow: hidden; /* Prevent scrolling on the body */
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 90vh; /* Adjust height to fit within the viewport */
+    width: 80%; /* Adjust width to fit within the viewport */
+    max-width: 1000px; /* Max width for larger screens */
+    overflow: auto; /* Enable scrolling within the container */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Styles */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+hr {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #555;
+    padding-bottom: 10px;
+}
+
+.form-control {
+    width: calc(100% - 20px); /* Ensure form control fits within the container */
+    padding: 5px;
+    margin: 10px auto; /* Center form control within container */
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.is-invalid {
+    border-color: #e3342f;
+}
+
+.text-danger {
+    color: #e3342f;
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    margin-bottom: 19px;
+    background-color: #2fa33d;
+    color: aliceblue;
+    font-size: smaller;
+    border-radius: 11px;
+}
+
+#submit-agenda {
+    background-color: #ff9e0d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    align-self: flex-end; /* Align the button to the right */
+}
+
+#submit-agenda:hover {
+    background-color: #be760a;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+        height: auto; /* Allow height to adjust on smaller screens */
+        width: 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        padding: 8px;
+    }
+
+    #submit-agenda {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2rem;
+        align-self: center; /* Center align button on mobile */
+    }
+}
